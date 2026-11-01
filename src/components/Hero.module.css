@@ -1,0 +1,71 @@
+.hero {
+  min-height: 80vh;
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    var(--primary-hover) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 1rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 12v4h4v-4h-4zm0 20v4h4v-4h-4zm-12 0v4h4v-4h-4zm0-16v4h4v-4h-4zm12 0v4h4v-4h-4zm-12-12v4h4v-4h-4zm0 12v4h4v-4h-4zm12 0v4h4v-4h-4zm-12 0v4h4v-4h-4zm0-16v4h4v-4h-4zm12-12v4h4v-4h-4zm0 12v4h4v-4h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3A");
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--background);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaBtn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: var(--accent);
+  color: var(--background);
+  font-weight: 600;
+  border-radius: var(--radius);
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.ctaBtn:hover {
+  background: var(--primary);
+}
